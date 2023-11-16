@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --font-color: #cad3f5;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #fff;
+  color: #111;
+  font-size: 1.5rem;
+  line-height: 1.3rem;
+  margin: 0;
+  min-height: 100vh;
+  padding: 0;
+  background: #181926;
+}
+
+.menu {
+  display: flex;
+  height: 50rem;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  padding: 10rem;
+}
+
+.menu--item{
+  display: flex;
+  padding: 5rem;
+  align-items: center;
+}
+
+.menu--title{
+  display: flex;
+  margin: 3rem;
+  align-content: flex-start;
+  color: var(--font-color);
+  font-size: 5rem;
+  line-height: 5rem;
+}
+
+.menu--form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 50%;
+  margin: 5rem;
+}
+
+.menu--van-naar, .menu--datum-tijd{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin: 0.5rem;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.menu--label-buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+.menu--label-van, .menu--label-naar, .menu--label-datum, .menu--label-tijd, .menu--label-vertrek, .menu--label-aankomst{
+  font-size: 1.5rem;
+  color: var(--font-color);
+}
+
+.menu--label-plan-btn {
+  background-color: #fff;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: #0f1111;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Amazon Ember",sans-serif;
+  font-size: 13px;
+  line-height: 29px;
+  padding: 0 10px 0 11px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: 100px;
+}
+
+.menu--label-plan-btn:hover {
+  background-color: #f7fafa;
+}
+
+.menu--label-plan-btn:focus {
+  border-color: #008296;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  outline: 0;
+}
