@@ -14,6 +14,11 @@ html{
   font-size: 62.5%;
 }
 
+a{
+  text-decoration: none;
+  color: white;
+}
+
 body {
   font-family: 'Lato', sans-serif;
   background-color: #fff;
@@ -28,11 +33,11 @@ body {
 
 .menu {
   display: flex;
-  height: 50rem;
   justify-content: center;
   align-items: center;
   margin: 1rem;
   padding: 10rem;
+  flex-direction: column; 
 }
 
 .menu--item{
@@ -48,15 +53,15 @@ body {
   color: var(--font-color);
   font-size: 5rem;
   line-height: 5rem;
+  order: -1;  
 }
 
-.menu--form{
+.menu--form {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   position: relative;
-  width: 50%;
   margin: 5rem;
 }
 
@@ -80,29 +85,19 @@ body {
 .menu--label-van, .menu--label-naar, .menu--label-datum, .menu--label-tijd, .menu--label-vertrek, .menu--label-aankomst{
   font-size: 1.5rem;
   color: var(--font-color);
+  height: 100%;
 }
 
 .menu--label-plan-btn {
   background-color: #fff;
   border: 1px solid #d5d9d9;
   border-radius: 8px;
-  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
-  box-sizing: border-box;
   color: #0f1111;
   cursor: pointer;
   display: inline-block;
   font-family: "Amazon Ember",sans-serif;
   font-size: 13px;
   line-height: 29px;
-  padding: 0 10px 0 11px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  width: 100px;
 }
 
 .menu--label-plan-btn:hover {
@@ -113,4 +108,159 @@ body {
   border-color: #008296;
   box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
   outline: 0;
+}
+
+.menu--9292--header{
+  background: #313244;
+  height: calc(4.4rem + 4.4rem);
+  transform: translateZ(0);
+  width: 100%;
+}
+
+.menu--9292--header-item{
+  background: #313244;
+  margin: 0 auto;
+  padding: 1rem;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu--9292--header-icon{
+  width: 10%;
+}
+
+.menu--9292--header-menus{
+  list-style-type: none;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 1rem;
+  margin: 0 auto;
+  border: 2px solid black;
+  border-radius: 4%;
+}
+
+.plan-info {
+  font-family: 'Lato', sans-serif;
+  color: #cad3f5;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding: 2rem;
+  background: #313244;
+  border-radius: 8px;
+  margin: 2rem;
+  margin-top: 10rem;
+}
+
+.plan-info-title {
+  font-size: 3.5rem;
+  line-height: 4rem;
+  margin-bottom: 3rem;
+  color: #cad3f5;
+}
+
+.plan-info h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #cad3f5;
+}
+
+.plan-info ul {
+  list-style-type: none;
+  padding-left: 2rem;
+}
+
+.journey--section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.legs--section{
+  display: inline-flex;
+  justify-content: center;
+  align-items:end;
+  height: 100%;
+  gap: 4rem;
+  padding: 1rem;
+}
+
+.journey-title {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin-bottom: 1rem;
+  color: #cad3f5;
+}
+
+.departure-time, .arrival-time, .duration {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #cad3f5;
+}
+
+.legs-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #cad3f5;
+}
+
+.leg-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #cad3f5;
+}
+
+.leg-departure-time, .leg-arrival-time, .leg-duration, .leg-from, .leg-to, .leg-modality-group, .leg-modality-code {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #cad3f5;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu {
+    padding: 5rem;
+  }
+
+  .menu--item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu--form {
+    width: 100%;
+    margin: 2rem 0;
+  }
+
+  .menu--title {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .menu--van-naar, .menu--datum-tijd {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .menu--label-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .menu--label-plan-btn {
+    width: 100%;
+    padding: 0.8rem 1rem;
+  }
 }
