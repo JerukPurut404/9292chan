@@ -9,14 +9,14 @@ $journeyArrivalTime = [];
 $journeyMinuteDuration = [];
 $journeyLegs = []; 
 
-foreach ($resp['journeys'] as $journey) {
+foreach ($resp['journeys'] as $journeyIndex => $journey) {
   $journeyDepartTime[] = formatDate($journey['departureTime']);
   $journeyArrivalTime[] = formatDate($journey['arrivalTime']);
   $journeyMinuteDuration[] = $journey['durationInMinutes'];
   
 
   $legsData = [];
-  foreach ($journey['legs'] as $leg) {
+  foreach ($journey['legs'] as $legIndex => $leg) {
     $legsData[] = [
       'departureTime' => isset($leg['departureTime']) ? formatDate($leg['departureTime']) : null,
       'arrivalTime' => isset($leg['arrivalTime']) ? formatDate($leg['arrivalTime']) : null,
@@ -26,9 +26,13 @@ foreach ($resp['journeys'] as $journey) {
       'modalityGroup' => isset($leg['modalityGroup']) ? $leg['modalityGroup'] : null,
       'modalityDescription' => isset($leg['modalityDescription']) ? $leg['modalityDescription'] : null,
       'service' => isset($leg['service']) ? $leg['service'] : null
-    ]; 
+    ];
+    
+    foreach ($leg['calls'] as $callIndex => $call) {
+      $legsData[$legIndex]['platform'] = isset($call['platform']) ? $call['platform'] : null;
+    }
   }
-  $journeyLegs[] = $legsData;
+  $journeyLegs[$journeyIndex] = $legsData;
 }
 
 function formatDate($isoDate) {

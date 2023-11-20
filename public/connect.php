@@ -13,10 +13,10 @@ $iso8601 = urlencode($iso8601);
 $autosuggestUrl = 'https://web-api-tst.9292.nl/v1/Autosuggest/';
 
 
-$fromTextUrl = $autosuggestUrl . str_replace(' ', '%20', urlencode($fromText));
+$fromTextUrl = $autosuggestUrl . str_replace(' ', '%20', $fromText);
 $fromTextData = getData($fromTextUrl);
 
-$toTextUrl = $autosuggestUrl . str_replace(' ', '%20', urlencode($toText));
+$toTextUrl = $autosuggestUrl . str_replace(' ', '%20', $toText);
 $toTextData = getData($toTextUrl);
 
 

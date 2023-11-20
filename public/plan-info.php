@@ -24,7 +24,7 @@
     <h2>Plans from: <?php echo $fromLocation ?> to: <?php echo $toLocation ?> </h2>
     <ul>
       <?php foreach ($resp['journeys'] as $index => $journey): ?>
-        <li>
+        <li class="plan--list">
           <div class="journey--section">
             <h3 class="journey-title">Option <?php echo $index + 1; ?></h3>
             <p class="departure-time">Departure Time: <?php echo $journeyDepartTime[$index]; ?></p>
@@ -34,7 +34,7 @@
           </div>
           <ul>
             <?php foreach ($journeyLegs[$index] as $legIndex => $leg): ?>
-              <li>
+              <li class="legs--list">
                 <div class="legs--section">
                   <h5 class="leg-title">Step <?php echo $legIndex + 1; ?></h5>
                   <p class="leg-departure-time"><?php if ($legIndex == 0) echo "Departure Time: "; ?><?php echo $leg['departureTime']; ?></p>
@@ -45,6 +45,7 @@
                   <p class="leg-modality-group"><?php if ($legIndex == 0) echo "Modality Group: "; ?><?php echo $leg['modalityGroup']; ?></p>
                   <p class="leg-modality-code"><?php if ($legIndex == 0) echo "Modality Description: "; ?><?php echo $leg['modalityDescription']; ?></p>
                   <p class="leg-service"><?php if ($legIndex == 0) echo "Service Number: "; ?><?php echo $leg['service']; ?></p>
+                  <p class="leg-platforms"><?php if ($legIndex == 0) echo "Platforms: "; ?><?php echo $leg['platform']; ?></p>
                 </div>
               </li>
             <?php endforeach; ?>

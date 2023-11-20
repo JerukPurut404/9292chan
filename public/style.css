@@ -157,6 +157,21 @@ input[type=text] {
   margin-top: 10rem;
 }
 
+.plan--list{
+ display: block;
+ align-items: center;
+ width: 100%;
+ margin: 0 auto;
+}
+
+.legs--list{
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
 .plan-info-title {
   font-size: 3.5rem;
   line-height: 4rem;
@@ -185,12 +200,11 @@ input[type=text] {
 }
 
 .legs--section{
-  display: inline-flex;
+  display: flex;
   justify-content: center;
-  align-items:end;
+  flex-direction: column;
+  align-items: center;
   height: 100%;
-  gap: 4rem;
-  padding: 1rem;
 }
 
 .journey-title {
@@ -224,10 +238,13 @@ input[type=text] {
   color: #cad3f5;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
   .menu {
     padding: 5rem;
+  }
+
+  .legs--list {
+    display: block;
   }
 
   .menu--item {
