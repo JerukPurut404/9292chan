@@ -1,4 +1,3 @@
-
 # 9292chan
 
 An alternative frontend for 9292, a journey planner and public transportation information service in the Netherlands.
@@ -6,6 +5,9 @@ An alternative frontend for 9292, a journey planner and public transportation in
 ## IMPORTANT INFO
 
 I just used this site for my own planning but for whatever reason, it's not completely accurate. I will try to fix it. Meanwhile use this at your own risk for being late to school or whatever it is.
+
+### Update: 
+After further inspection, it's looks like it has something to do with the webserver being stuck at summertime for whatever reason. 
 
 ## Current features
 
