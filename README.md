@@ -3,6 +3,10 @@
 
 An alternative frontend for 9292, a journey planner and public transportation information service in the Netherlands.
 
+## IMPORTANT INFO
+
+I just used this site for my own planning but for whatever reason, it's not completely accurate. I will try to fix it. Meanwhile use this at your own risk for being late to school or whatever it is.
+
 ## Current features
 
 1. No trackers, ads, or JavaScript.
@@ -14,7 +18,8 @@ An alternative frontend for 9292, a journey planner and public transportation in
 
 1. Add responsive styling and improve the design of the plan-info section.
 2. Enhance the styling of the index page.
-3. Add Price Information 
+3. Add Price Information
+4. FIX THE DAMN INACCURATE PLANNING
 
 ## Q&A:
 
