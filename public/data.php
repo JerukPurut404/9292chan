@@ -10,16 +10,16 @@ $journeyMinuteDuration = [];
 $journeyLegs = []; 
 
 foreach ($resp['journeys'] as $journeyIndex => $journey) {
-  $journeyDepartTime[] = formatDate($journey['departureTime']);
-  $journeyArrivalTime[] = formatDate($journey['arrivalTime']);
+  $journeyDepartTime[] = formatDate($journey['departureTime'], 'Europe/Amsterdam');
+  $journeyArrivalTime[] = formatDate($journey['arrivalTime'], 'Europe/Amsterdam');
   $journeyMinuteDuration[] = $journey['durationInMinutes'];
   
 
   $legsData = [];
   foreach ($journey['legs'] as $legIndex => $leg) {
     $legsData[] = [
-      'departureTime' => isset($leg['departureTime']) ? formatDate($leg['departureTime']) : null,
-      'arrivalTime' => isset($leg['arrivalTime']) ? formatDate($leg['arrivalTime']) : null,
+      'departureTime' => isset($leg['departureTime']) ? formatDate($leg['departureTime'], 'Europe/Amsterdam') : null,
+      'arrivalTime' => isset($leg['arrivalTime']) ? formatDate($leg['arrivalTime'], 'Europe/Amsterdam') : null,
       'duration' => isset($leg['durationInMinutes']) ? $leg['durationInMinutes'] : null,
       'from' => isset($leg['from']) ? $leg['from'] : null,
       'to' => isset($leg['to']) ? $leg['to'] : null,
@@ -35,8 +35,8 @@ foreach ($resp['journeys'] as $journeyIndex => $journey) {
   $journeyLegs[$journeyIndex] = $legsData;
 }
 
-function formatDate($isoDate) {
-  $date = new DateTime($isoDate);
+function formatDate($isoDate, $timezone) {
+  $date = new DateTime($isoDate, new DateTimeZone($timezone));
   return $date->format('Y-d-m H:i');
 }
 

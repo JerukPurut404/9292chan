@@ -1,3 +1,10 @@
+<?php
+$datetime2 = new DateTime("now", new DateTimeZone("Europe/Amsterdam"));
+$hours2 = $datetime2->format('H:i');
+$date2 = $datetime2->format('d-m-Y');
+?>
+
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -36,12 +43,12 @@
       <div class="menu--datum-tijd">
         <fieldset>
           <legend class="menu--label-datum">Date</legend>
-          <input class="menu--label-datum-input" type="text" data-type="date" id="date" name="date" min="" max="" placeholder="dd-mm-yyyy" value="<?php echo date('d-m-Y'); ?>" required/>
+          <input class="menu--label-datum-input" type="text" data-type="date" id="date" name="date" min="" max="" placeholder="dd-mm-yyyy" value="<?php echo $date2 ?>" required/>
         </fieldset>
 
         <fieldset>
           <legend class="menu--label-tijd">Time</legend>
-          <input class="menu--label-tijd-input" type="text" data-type="time" id="time" name="time" placeholder="HH:mm" value="<?php echo date('H:i'); ?>" pattern="([01]?[0-9]{1}|2[0-3]{1}):[0-5]{1}[0-9]{1}" required/>
+          <input class="menu--label-tijd-input" type="text" data-type="time" id="time" name="time" placeholder="HH:mm" value="<?php echo $hours2 ?>" pattern="([01]?[0-9]{1}|2[0-3]{1}):[0-5]{1}[0-9]{1}" required/>
         </fieldset>
       </div>
       

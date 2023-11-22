@@ -9,6 +9,10 @@ I just used this site for my own planning but for whatever reason, it's not comp
 ### Update: 
 After further inspection, it's looks like it has something to do with the webserver being stuck at summertime for whatever reason. 
 
+### Another update: 
+
+I have fixed it by setting a Europe/Amsterdam timezone. However, I realize that it still lacks accurate information, such as train delays. I will add that functionality. Additionally, it needs to display the starting platform of the train, not just the end platform.
+
 ## Current features
 
 1. No trackers, ads, or JavaScript.
@@ -16,12 +20,13 @@ After further inspection, it's looks like it has something to do with the webser
 3. Respects your privacy by not storing any data.
 4. All requests are proxied.
 
-## Planned features
+## Planned tasks
 
 1. Add responsive styling and improve the design of the plan-info section.
 2. Enhance the styling of the index page.
 3. Add Price Information
-4. FIX THE DAMN INACCURATE PLANNING
+4. Add if a plan had delays
+5. Add Starting Platform instead of the end platform
 
 ## Q&A:
 
