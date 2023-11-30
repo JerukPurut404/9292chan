@@ -4,14 +4,7 @@ An alternative frontend for 9292, a journey planner and public transportation in
 
 ## IMPORTANT INFO
 
-I just used this site for my own planning but for whatever reason, it's not completely accurate. I will try to fix it. Meanwhile use this at your own risk for being late to school or whatever it is.
-
-### Update: 
-After further inspection, it's looks like it has something to do with the webserver being stuck at summertime for whatever reason. 
-
-### Another update: 
-
-I have fixed it by setting a Europe/Amsterdam timezone. However, I realize that it still lacks accurate information, such as train delays. I will add that functionality. Additionally, it needs to display the starting platform of the train, not just the end platform.
+Another problem has arrived, this time in the form of a 500 internal server error. It is undoubtedly related to the API server itself as I am still able to access the exact same API endpoint. Furthermore, it is important to note that the proxy is not to blame for this issue.
 
 ## Current features
 
@@ -50,3 +43,4 @@ You can contribute by hosting an instance of the site or by starring, forking, a
 Special thanks to [Proxylist](https://github.com/proxifly/free-proxy-list) for providing their proxy list for making requests.
 
 Appreciation goes to [Free icons](https://free-icons.github.io/free-icons/) for their icons available on GitHub.
+
