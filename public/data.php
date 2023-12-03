@@ -41,4 +41,4 @@ function formatDate($isoDate, $timezone) {
 }
 
 include 'plan-info.php';
-?>
+

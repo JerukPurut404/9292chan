@@ -4,7 +4,7 @@ An alternative frontend for 9292, a journey planner and public transportation in
 
 ## IMPORTANT INFO
 
-Another problem has arrived, this time in the form of a 500 internal server error. It is undoubtedly related to the API server itself as I am still able to access the exact same API endpoint. Furthermore, it is important to note that the proxy is not to blame for this issue.
+That problem has been fixed. I need more design fixing later. 
 
 ## Current features
 

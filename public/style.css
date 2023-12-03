@@ -112,9 +112,10 @@ body {
 
 .menu--9292--header{
   background: #313244;
-  height: calc(4.4rem + 4.4rem);
   transform: translateZ(0);
   width: 100%;
+  height: auto;
+  display: flex;
 }
 
 .menu--9292--header-item{
@@ -163,6 +164,7 @@ input[type=text] {
  width: 100%;
  margin: 0 auto;
 }
+
 
 .legs--list{
   display: inline-block;
