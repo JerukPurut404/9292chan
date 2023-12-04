@@ -4,7 +4,7 @@ An alternative frontend for 9292, a journey planner and public transportation in
 
 ## IMPORTANT INFO
 
-That problem has been fixed. I need more design fixing later. 
+THEY BLOCKED THE API. This project will continue (hopefully).  
 
 ## Current features
 
